@@ -1,0 +1,40 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+.env/
+
+# Pygame assets
+assets/fonts/
+assets/images/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VSCode settings
+.vscode/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Python egg files
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Ignore compiled C/C++ files (if any)
+*.o
+*.obj
+*.so
+*.dll
+*.exe
+
+# Backup files
+*.bak
+*.swp
+*.swo
