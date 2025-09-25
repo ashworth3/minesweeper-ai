@@ -1,20 +1,42 @@
-# Classic Minesweeper Game with AI
+# Classic Minesweeper Game with AI Assist
 
 A Python implementation of the classic Minesweeper game, featuring an AI that can play the game intelligently. The game is built using `pygame` for the graphical interface.
 
 ## Features
 
 - **Classic Minesweeper Gameplay**: Play the traditional Minesweeper game with customizable board sizes and mine counts.
-- **AI Integration**: Watch the AI make safe moves and infer mine locations using logical reasoning.
-- **User-Friendly Interface**: A clean and interactive UI built with `pygame`.
+- **AI Integration**: Watch the AI make safe moves and infer mine locations using solely logical knowledge reasoning.
+- **User-Friendly Interface**: A clean and interactive UI built using `pygame`.
+
+## How It Works
+
+The AI uses **logic and math** to solve the board:
+
+- **Clues as equations**  
+  Each revealed number is turned into a constraint.  
+  *Example: if a cell shows “2”, then exactly 2 of its 8 neighbors are mines.*
+
+- **Knowledge as sentences**  
+  A sentence looks like `{A, B, C} = 1`, meaning *exactly one of A, B, or C is a mine*.
+
+- **Direct deductions**  
+  - If `count = 0` → all cells in the set are **safe**.  
+  - If `count = number of cells` → all cells in the set are **mines**.
+
+- **Subset rule (logical subtraction)**  
+  If `{A, B, C} = 1` and `{A, B, C, D} = 2`,  
+  then subtract → `{D} = 1` → **D is a mine**.
+
+- **Iterative reasoning**  
+  The AI loops through its knowledge, marking new safes/mines and generating new equations until no further progress can be made.
+
+- **Fallback move**  
+  If no logical move exists, the AI picks a random unexplored cell that isn’t known to be a mine.
 
 ## Screenshots
 
 ### Welcome Screen
 ![Welcome Screen](screenshots/welcome-screen.png)
-
-### Start of Game
-![Start Game](screenshots/start.png)
 
 ### Gameplay
 ![Gameplay](screenshots/game.png)
@@ -65,7 +87,7 @@ A Python implementation of the classic Minesweeper game, featuring an AI that ca
 ```
 
 ## Requirements
-- Python 3.10 or higher
+- Python 3.10+
 - `pygame` library
 
 ## Controls
