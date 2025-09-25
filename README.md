@@ -61,3 +61,9 @@ A Python implementation of the classic Minesweeper game, featuring an AI that ca
 - Right-Click: Flag or unflag a cell.
 - AI Move Button: Let the AI make a move.
 - Reset Button: Restart the game.
+
+---
+
+<p align="center">
+  Project by <a href="https://github.com/ashworth3">@ashworth3</a>
+</p>
