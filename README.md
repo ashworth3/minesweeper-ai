@@ -1,4 +1,4 @@
-# Minesweeper Game with AI Assist
+# Classic Minesweeper Game with AI
 
 A Python implementation of the classic Minesweeper game, featuring an AI that can play the game intelligently. The game is built using `pygame` for the graphical interface.
 
@@ -7,6 +7,20 @@ A Python implementation of the classic Minesweeper game, featuring an AI that ca
 - **Classic Minesweeper Gameplay**: Play the traditional Minesweeper game with customizable board sizes and mine counts.
 - **AI Integration**: Watch the AI make safe moves and infer mine locations using logical reasoning.
 - **User-Friendly Interface**: A clean and interactive UI built with `pygame`.
+
+## Screenshots
+
+### Welcome Screen
+![Welcome Screen](screenshots/welcome-screen.png)
+
+### Start of Game
+![Start Game](screenshots/start.png)
+
+### Gameplay
+![Gameplay](screenshots/game.png)
+
+### AI Making Moves
+![AI Moves](screenshots/ai-moves.png)
 
 ## How to Play
 
@@ -38,9 +52,7 @@ A Python implementation of the classic Minesweeper game, featuring an AI that ca
 ## Project Structure
 ```
 .
-├── assets/                 # Game assets (images, fonts)
-│   ├── fonts/
-│   │   └── OpenSans-Regular.ttf
+├── assets/                 # Game assets
 │   ├── images/
 │   │   ├── flag.png
 │   │   └── mine.png
@@ -49,7 +61,7 @@ A Python implementation of the classic Minesweeper game, featuring an AI that ca
 ├── requirements.txt        # Python dependencies
 ├── .gitignore              # Ignored files for Git
 ├── README.md               # Project documentation
-└── .vscode/                # VSCode configuration files
+└── screenshots/            # Game Screenshots
 ```
 
 ## Requirements
